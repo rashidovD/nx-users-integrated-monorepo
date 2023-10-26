@@ -1,0 +1,11 @@
+<div class="container">
+  <ng-container *ngFor="let user of users$ | async">
+    <div class="user-card">
+      <h3>Name: {{user.name}}</h3>
+      <p>E-mail: {{user.email}}</p>
+      <p>Phone: {{user.phone}}</p>
+      <p>Website: {{user.website}}</p>
+      <button (click)="deleteCard(user.id)">DELETE</button>
+    </div>
+  </ng-container>
+</div>
